@@ -46,9 +46,9 @@ function playGame() {
         console.log(`Human Score: ${humanScore}, Computer Score: ${computerScore}`)
     }
     if (humanScore > computerScore) {
-        alert("You Won the Game!", humanScore, computerScore)
+        alert("You Won the Game!")
     } else if (computerScore > humanScore) {
-        alert("You lost the Game!", humanScore, computerScore)
+        alert("You lost the Game!")
     } else {
         alert("Match Draw! :D")
     }
