@@ -64,13 +64,14 @@ function playGame() {
                     computerScore++
             }
             scoresElem.textContent = `Human Score: ${humanScore} Computer Score: ${computerScore}`
-        } 
-        if (humanScore >= 5) {
-            outcome.textContent = "Congrats! You won the Aoe2 Unit War against AI"
-        } else if (computerScore >= 5){
-            outcome.textContent = "Alas! You lost this match against AI"
+        } else {
+            if (humanScore >= 5) {
+                outcome.textContent = "Congrats! You won the Aoe2 Unit War against AI"
+            } else if (computerScore >= 5){
+                outcome.textContent = "Alas! You lost this match against AI"
+            }
+            div.appendChild(outcome)
         }
-        div.appendChild(outcome)
     }
 
     buttons.forEach(button => {
