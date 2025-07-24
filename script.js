@@ -23,7 +23,6 @@ function getHumanChoice() {
 
 function playGame() {
     let humanScore = 0, computerScore = 0;
-    let rounds = 5;
     function playRound(humanChoice, computerChoice) {
         if (humanChoice === computerChoice) {
             console.log("Draw!", `Both chose ${humanChoice}.`)
@@ -40,17 +39,6 @@ function playGame() {
                 console.log(`You Lose! ${computerChoice} beats ${humanChoice}`)
                 computerScore++
         }
-    }
-    for(let i = 0; i < rounds; i++) {
-        playRound(getHumanChoice(), getComputerChoice());
-        console.log(`Human Score: ${humanScore}, Computer Score: ${computerScore}`)
-    }
-    if (humanScore > computerScore) {
-        alert("You Won the Game!")
-    } else if (computerScore > humanScore) {
-        alert("You lost the Game!")
-    } else {
-        alert("Match Draw! :D")
     }
 }
 
